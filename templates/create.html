@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Cars{% endblock %}
+
+{% block content %}
+<h2 class="text-warning mb-4">Add a New Cars</h2>
+
+<form action="{{ url_for('add_car') }}" method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label for="Brand_name" class="form-label">Brand Name</label>
+    <input type="text" class="form-control" id="Brand_name" name="Brand_name" required>
+  </div>
+
+  <div class="col-md-6">
+    <label for="Model" class="form-label">Model</label>
+    <input type="text" class="form-control" id="Model" name="Model" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="Engine" class="form-label">Engine</label>
+    <input type="number" class="form-control" id="Engine" name="Engine" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="Fuel" class="form-label">Fuel</label>
+    <input type="text" class="form-control" id="Fuel" name="Fuel" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="Transmission" class="form-label">Transmission</label>
+    <input type="text" class="form-control" id="Transmission" name="Transmission" required>
+  </div>
+
+  <label for="condition" class="form-label">condition</label>
+    <input type="text" class="form-control" id="condition" name="condition" required>
+  </div>
+  
+  <label for="colour" class="form-label">colour</label>
+    <input type="text" class="form-control" id="colour" name="colour" required>
+  </div>
+
+  <label for="year" class="form-label">year</label>
+    <input type="year" class="form-control" id="year" name="year" required>
+  </div>
+  
+  <div class="col-12">
+    <button type="price" class="btn btn-warning">Add Cars</button>
+  </div>
+</form>
+{% endblock %}

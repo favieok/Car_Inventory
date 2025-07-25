@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update car </title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Inventory{% endblock %}
+
+    {% block content %}
+    <h1>Update car </h1>
+    <form action="{{ url_for('update_item', id=car[0]) }}" method="POST">
+        <label>Brand Name:</label>
+        <input type="text" name="Brand_name" value="{{ car[1] }}" required><br><br>
+
+        <label>Model:</label>
+        <input type="text" name="Model" value="{{ car[2] }}" required><br><br>
+
+        <label>Engine:</label>
+        <input type="number" name="Engine" value="{{ car[3] }}" required><br><br>
+
+        <label>Fuel:</label>
+        <input type="text" name="Fuel" value="{{ car[4] }}" required><br><br>
+
+        <label>Transmission:</label>
+        <input type="text" name="Transmission" value="{{ car[5] }}" required><br><br>
+
+        <label>Condition:</label>
+        <input type="text" name="condition" value="{{ car[4] }}" required><br><br>
+
+        <label>colour:</label>
+        <input type="text" name="colour" value="{{ car[4] }}" required><br><br>
+
+        <label>year:</label>
+        <input type="text" name="year" value="{{ car[4] }}" required><br><br>
+
+        <label>price:</label>
+        <input type="text" name="price" value="{{ car[4] }}" required><br><br>
+
+        <button type="submit">Update</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
